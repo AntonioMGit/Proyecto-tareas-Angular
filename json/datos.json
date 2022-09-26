@@ -1,0 +1,135 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "nombre": "cli1",
+      "apellidos": "ape1"
+    },
+    {
+      "id": 2,
+      "nombre": "cli2",
+      "apellidos": "ape2"
+    },
+    {
+      "id": 3,
+      "nombre": "cli3",
+      "apellidos": "ape3"
+    },
+    {
+      "nombre": "asd",
+      "apellidos": "sfd",
+      "id": 4
+    }
+  ],
+  "proyectos": [
+    {
+      "id": 1,
+      "nombre": "pro1"
+    },
+    {
+      "id": 2,
+      "nombre": "pro2"
+    },
+    {
+      "id": 3,
+      "nombre": "pro3"
+    }
+  ],
+  "empleados": [
+    {
+      "id": 1,
+      "nif": "001",
+      "nombre": "rosa"
+    },
+    {
+      "id": 2,
+      "nif": "002",
+      "nombre": "pepe"
+    },
+    {
+      "id": 3,
+      "nif": "003",
+      "nombre": "luis"
+    }
+  ],
+  "tareas": [
+    {
+      "id": 1,
+      "nombre": "tar1",
+      "fechaInicio": "2022-07-02",
+      "fechaFin": "2022-05-20",
+      "proyecto": 1,
+      "asignaciones": [
+        "001",
+        "002"
+      ]
+    },
+    {
+      "nombre": "asdfgh",
+      "fechaInicio": "23745",
+      "fechaFin": "324",
+      "id": 2
+    },
+    {
+      "nombre": "yrtytr",
+      "fechaInicio": "ytrytry",
+      "fechaFin": "tyrty",
+      "proyecto": "1",
+      "asignaciones": [
+        "1",
+        "2"
+      ],
+      "id": 3
+    },
+    {
+      "nombre": "aaaaaaaaaaa",
+      "fechaInicio": "asd",
+      "fechaFin": "as",
+      "proyecto": "2",
+      "asignaciones": [
+        "1",
+        "2",
+        "3"
+      ],
+      "id": 4
+    }
+  ],
+  "imputaciones": [
+    {
+      "id": 1,
+      "empleado": "001",
+      "tarea": 1,
+      "fecha": "2022-05-03",
+      "horas": 5.25
+    },
+    {
+      "empleado": "2",
+      "tarea": "2",
+      "fechaFin": "sa",
+      "id": 2
+    },
+    {
+      "empleado": "3",
+      "tarea": "2",
+      "fechaFin": "ad",
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "empleado": "1",
+      "tarea": "1",
+      "fechaFin": "234",
+      "horas": "4",
+      "id": 5
+    },
+    {
+      "empleado": "1",
+      "tarea": "1",
+      "fechaFin": "sdas",
+      "horas": 23456,
+      "id": 6
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "alumnos": [
+    {
+      "id": 1,
+      "nif": "001",
+      "nombre": "pepe",
+      "apellidos": "ape1"
+    },
+    {
+      "id": 2,
+      "nif": "002",
+      "nombre": "luis",
+      "apellidos": "ape2"
+    }
+  ],
+  "estudios": [
+    {
+      "id": 1,
+      "nombre": "informatica",
+      "asignaturas": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "matematicas",
+      "asignaturas": [
+        1,
+        2
+      ]
+    }
+  ],
+  "asignaturas": [
+    {
+      "id": 1,
+      "nombre": "algebra"
+    },
+    {
+      "id": 2,
+      "nombre": "calculo"
+    },
+    {
+      "id": 3,
+      "nombre": "programacion"
+    }
+  ],
+  "matriculas": [
+    {
+      "id": 1,
+      "alumno": "001",
+      "estudios": 1,
+      "asignaturas": [
+        1,
+        2
+      ],
+      "pago": {
+        "medio": "tarjeta",
+        "datos": "1234-1234-1234"
+      }
+    },
+    {
+      "id": 2,
+      "alumno": "001",
+      "estudios": 1,
+      "asignaturas": [
+        1,
+        2
+      ],
+      "pago": {
+        "medio": "transferencia",
+        "datos": "ES12-1234-1234-1234-1234"
+      }
+    },
+    {
+      "alumno": "001",
+      "estudios": "1",
+      "asignaturas": [],
+      "pago": {
+        "medio": "Transferencia",
+        "datos": "12345A"
+      },
+      "id": 3
+    },
+    {
+      "alumno": "001",
+      "estudios": "1",
+      "asignaturas": [
+        "2",
+        "3"
+      ],
+      "pago": {
+        "medio": "Tarjeta",
+        "datos": "asdfdsfsdfdsfsdfdsfds"
+      },
+      "id": 4
+    },
+    {
+      "alumno": "002",
+      "estudios": "2",
+      "asignaturas": [
+        "1",
+        "2"
+      ],
+      "pago": {
+        "medio": "Transferencia",
+        "datos": "12345678"
+      },
+      "id": 5
+    },
+    {
+      "alumno": "002",
+      "estudios": "2",
+      "asignaturas": [
+        "2"
+      ],
+      "pago": {
+        "medio": "Transferencia",
+        "datos": "1111-1111-1111-1111"
+      },
+      "id": 6
+    }
+  ]
+}
