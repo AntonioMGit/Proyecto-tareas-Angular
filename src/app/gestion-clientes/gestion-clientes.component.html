@@ -1,0 +1,33 @@
+<div class="container">
+    <div>
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input [(ngModel)]="cliente.nombre" type="text" class="form-control" id="nombre" aria-describedby="nombre">
+            <div id="nombreHelp" class="form-text">Nombre del cliente</div>
+        </div>
+        <div class="mb-3">
+            <label for="apellidos" class="form-label">apellidos</label>
+            <input [(ngModel)]="cliente.apellidos" type="text" class="form-control" id="apellidos" aria-describedby="apellidos">
+            <div id="apellidosHelp" class="form-text">apellidos del cliente</div>
+        </div>
+    </div>
+    <button class="btn btn-primary" (click)="crearCliente()">Crear clientes</button>
+
+    <button class="btn btn-primary" (click)="cargarClientes()">Cargar clientes</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cliente of clientes">
+                <td>{{cliente.id}}</td>
+                <td>{{cliente.nombre}}</td>
+                <td>{{cliente.apellidos}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,30 @@
+<div class="container">
+    <div>
+        <div class="mb-3">
+            <p>Empleado:</p>
+            <select [(ngModel)]="imputacion.empleado" name="empleados" id="empleados">
+                <option value="{{emp.id}}" *ngFor="let emp of empleados">{{emp.id}} - {{emp.nif}} - {{emp.nombre}}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <p>Tarea:</p>
+            <select [(ngModel)]="imputacion.tarea" name="tar" id="tar">
+                <option value="{{tar.id}}" *ngFor="let tar of tareas">{{tar.id}} - {{tar.nombre}}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="nHoras" class="form-label">Num horas</label>
+            <input [(ngModel)]="imputacion.horas" type="number" class="form-control" id="nHoras" aria-describedby="nHoras">
+            <div id="nHorasHelp" class="form-text">Num horas</div>
+        </div>
+        <div class="mb-3">
+            <label for="fFin" class="form-label">Fecha fin</label>
+            <input [(ngModel)]="imputacion.fechaFin" type="text" class="form-control" id="fFin" aria-describedby="fFin">
+            <div id="fFinHelp" class="form-text">Fecha fin</div>
+        </div>
+    </div>
+
+    <button class="btn btn-primary" (click)="crearImputacion()">Crear imputacion</button>
+</div>
+
+

@@ -1,0 +1,39 @@
+<div class="container">
+    <div>
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input [(ngModel)]="tarea.nombre" type="text" class="form-control" id="nombre" aria-describedby="nombre">
+            <div id="nombreHelp" class="form-text">Nombre de la tarea</div>
+        </div>
+        <div class="mb-3">
+            <label for="fInicio" class="form-label">Fecha incio</label>
+            <input [(ngModel)]="tarea.fechaInicio" type="text" class="form-control" id="fInicio" aria-describedby="fInicio">
+            <div id="fInicioHelp" class="form-text">Fecha inicio</div>
+        </div>
+        <div class="mb-3">
+            <label for="fFin" class="form-label">Fecha fin</label>
+            <input [(ngModel)]="tarea.fechaFin" type="text" class="form-control" id="fFin" aria-describedby="fFin">
+            <div id="fFinHelp" class="form-text">Fecha fin</div>
+        </div>
+
+        <div class="mb-3">
+            <p>Proyecto:</p>
+            <select [(ngModel)]="tarea.proyecto" name="proyecto" id="proyecto">
+                <option value="{{pro.id}}" *ngFor="let pro of proyectos">{{pro.id}} - {{pro.nombre}}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <!-- OJO CUIDAO QUE ES MULTIPLE -->
+            <p>Empleados:</p>
+            <select [(ngModel)]="tarea.asignaciones" name="empleados" id="empleados" multiple>
+                <option value="{{emp.id}}" *ngFor="let emp of empleados">{{emp.id}} - {{emp.nif}} - {{emp.nombre}}</option>
+            </select>
+        </div>
+
+
+    </div>
+
+    <button class="btn btn-primary" (click)="crearTarea()">Crear tarea</button>
+    <!-- <button class="btn btn-primary" (click)="">Crear clientes</button> -->
+</div>
+

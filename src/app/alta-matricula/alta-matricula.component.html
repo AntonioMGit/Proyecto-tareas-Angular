@@ -1,0 +1,67 @@
+<div class="container">
+    <!-- <p>Alumno:</p>
+    <select [(ngModel)]="imputacion.empleado" name="empleados" id="empleados">
+        <option value="{{emp.id}}" *ngFor="let emp of empleados">{{emp.id}} - {{emp.nif}} - {{emp.nombre}}</option>
+    </select> -->
+    <p>Alumno:</p>
+    <select [(ngModel)]="matricula.alumno" name="alumno" id="Aumno">
+        <option value="{{alu.nif}}" *ngFor="let alu of alumnos">{{alu.id}} - {{alu.nif}} - {{alu.nombre}} -{{alu.apellidos}}</option>
+    </select>
+    <hr>
+    <p>Estudios:</p>
+    <select (change)="pintarAsignaturas()" [(ngModel)]="matricula.estudios" name="estudios" id="estudios">
+        <option value="{{est.id}}" *ngFor="let est of estudios">{{est.id}} - {{est.nombre}}</option>
+    </select>
+    <hr>
+    <!-- <div class="mb-3">
+        <p>Empleados:</p>
+        <select [(ngModel)]="tarea.asignaciones" name="empleados" id="empleados" multiple>
+            <option value="{{emp.id}}" *ngFor="let emp of empleados">{{emp.id}} - {{emp.nif}} - {{emp.nombre}}</option>
+        </select>
+    </div> -->
+    <div>
+        <!-- OJO CUIDAO QUE ES MULTIPLE -->
+        <p>Asignaturas:</p>
+        <select [(ngModel)]="matricula.asignaturas" name="asignaturas" id="asignaturas" multiple>
+            <option value="{{asi.id}}" *ngFor="let asi of asignaturasFiltradas">{{asi.id}} - {{asi.nombre}}</option>
+        </select>
+    </div>
+    <hr>
+    <p>Metodo pago:</p>
+    <select [(ngModel)]="matricula.pago.medio" (change)="formaPago()" name="metPago" id="metPago">
+        <option>Tarjeta</option>
+        <option>Transferencia</option>
+    </select>
+    <!-- <div class="mb-3">
+        <label for="fInicio" class="form-label">Fecha incio</label>
+        <input [(ngModel)]="tarea.fechaInicio" type="text" class="form-control" id="fInicio" aria-describedby="fInicio">
+        <div id="fInicioHelp" class="form-text">Fecha inicio</div>
+    </div> -->
+    <div *ngIf="tipo">
+        <label for="nTarjeta" class="form-label">Num tarjeta</label>
+        <input #campoDatosTarjeta="ngModel" 
+        pattern="^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$"
+        [(ngModel)]="matricula.pago.datos" type="text" class="form-control" id="nTarjeta">
+        <div class="alert alert-danger" *ngIf="campoDatosTarjeta.invalid && campoDatosTarjeta.touched">
+            <div *ngIf="campoDatosTarjeta.errors?.['pattern']">
+                Formato numero tarjeta incorrecto;
+                ejemplo: 1234-1234-1234-1234
+            </div>
+        </div>
+    </div>
+    <div *ngIf="!tipo">
+        <label for="nCuenta" class="form-label">Num cuenta</label>
+        <input #campoDatosCuenta="ngModel"
+        pattern="^[A-Z]{2}[0-9]{2} [0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}$"
+        [(ngModel)]="matricula.pago.datos" type="text" class="form-control" id="nCuenta">
+        <div class="alert alert-danger" *ngIf="campoDatosCuenta.invalid && campoDatosCuenta.touched">
+            <div *ngIf="campoDatosCuenta.errors?.['pattern']">
+                Formato numero cuenta incorrecto;
+                ejemplo: ES12 1234 1234 1234 1234 1234
+            </div>
+        </div>
+    </div>
+
+    <!-- <button class="btn btn-primary" (click)="crearImputacion()">Crear imputacion</button> -->
+    <button class="btn btn-primary" (click)="crearMatricula()">Crear matricula</button>
+</div>

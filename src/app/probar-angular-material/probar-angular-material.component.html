@@ -1,0 +1,18 @@
+<div class="container">
+    <form>
+        <div class="row my-2">
+            <mat-form-field>
+                <input type="text" 
+                    matInput
+                    placeholder="Ciudad"
+                    [formControl]="ciudad"
+                    [autocomplete]="autoCiudad">
+                <mat-autocomplete #autoCiudad="matAutocomplete">
+                    <!-- <mat-option *ngFor="let ciudad of ciudades">{{ciudad}}</mat-option> -->
+                    <mat-option [value]="ciudad.codigo" *ngFor="let ciudad of listaCiudades">{{ciudad.nombre}}</mat-option>
+                </mat-autocomplete>
+                <mat-hint align="start">Elige ciudad</mat-hint>
+            </mat-form-field>
+        </div>
+    </form>
+</div>
